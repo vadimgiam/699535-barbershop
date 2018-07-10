@@ -1,0 +1,47 @@
+.filter-option input[type="radio"]{
+    display:none;
+  }
+  .radio__label{
+    position: relative;
+    cursor: pointer;
+  }
+  .radio__label::before{
+    content: "";
+    position: absolute;
+    top: -2px;
+    left:-40px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid black;
+    background-color: #f9f6f3;
+    
+  }
+
+  .radio__label::after{
+    content: "";
+    position: absolute;
+    top: -2px;
+    left:-40px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 2px solid black;
+    background-color: black;
+    transform: scale(0);
+    transition-property: transform;
+    transition-duration: 0.28s;
+  }
+
+
+
+  input[type="radio"]:checked ~ .radio__label::before{
+  border:2px solid  #663d15;
+  }
+  input[type="radio"]:checked ~ .radio__label::after{
+    
+    transform: scale(1);
+  }
+  .radio__label:hover{
+    color:#663d15;
+  }
