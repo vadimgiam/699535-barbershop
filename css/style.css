@@ -8,6 +8,7 @@ html,body{
     font-weight: 700;
     color: white;
     text-transform: uppercase;
+    min-width: 960px;
 }
 .main-bg {
   background-color: black;
